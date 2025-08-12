@@ -1,0 +1,633 @@
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LendTech Pro - Plateforme de Prêt Peer-to-Peer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#059669',
+                        danger: '#DC2626',
+                        neutral: {
+                            50: '#F8FAFC',
+                            100: '#F1F5F9',
+                            800: '#1F2937',
+                            900: '#111827'
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="font-inter bg-neutral-50 text-neutral-800">
+
+    <!-- @COMPONENT: Navigation -->
+    <nav class="bg-white shadow-lg border-b border-neutral-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-coins text-primary text-2xl"></i>
+                        <span class="text-xl font-bold text-neutral-800">LendTech Pro</span>
+                    </div>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="#platform" class="text-neutral-600 hover:text-primary transition-colors duration-200">Plateforme</a>
+                        <a href="#investors" class="text-neutral-600 hover:text-primary transition-colors duration-200">Investisseurs</a>
+                        <a href="#borrowers" class="text-neutral-600 hover:text-primary transition-colors duration-200">Emprunteurs</a>
+                        <a href="#analytics" class="text-neutral-600 hover:text-primary transition-colors duration-200">Analytics</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-primary hover:text-blue-700 font-medium transition-colors duration-200">
+                        <!-- TODO: Implement authentication logic -->
+                        Connexion
+                    </button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                        <!-- TODO: Implement registration logic -->
+                        S'inscrire
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section class="bg-gradient-to-br from-primary to-blue-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                        Révolutionnez vos <span class="text-blue-200">investissements</span> et <span class="text-blue-200">emprunts</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100 leading-relaxed">
+                        Plateforme de prêt peer-to-peer avec scoring algorithmique avancé et marketplace d'investissement intelligente.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors duration-200">
+                            Demander un Prêt
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors duration-200">
+                            Devenir Investisseur
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- A modern financial dashboard with charts and graphs on a computer screen -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Dashboard financier moderne" 
+                         class="rounded-xl shadow-2xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Platform Overview -->
+    <section id="platform" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
+                    Plateforme Technologique Avancée
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Notre algorithme de credit scoring et notre marketplace intelligente connectent investisseurs et emprunteurs de manière optimale.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-neutral-50 p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-primary text-white w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-calculator text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-neutral-800 mb-4">Credit Scoring Avancé</h3>
+                    <p class="text-neutral-600 mb-4">Algorithme sophistiqué analysant 50+ critères financiers pour une évaluation précise du risque.</p>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-neutral-600">Revenus</span>
+                            <span class="font-medium text-secondary">35%</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-neutral-600">Historique</span>
+                            <span class="font-medium text-secondary">25%</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-neutral-600">Ratio d'endettement</span>
+                            <span class="font-medium text-secondary">20%</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-neutral-600">Autres critères</span>
+                            <span class="font-medium text-secondary">20%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-50 p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-secondary text-white w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-neutral-800 mb-4">ROI Optimisé</h3>
+                    <p class="text-neutral-600 mb-4">Rendements moyens de 8-15% selon profil de risque avec diversification automatique.</p>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm text-neutral-600">Rendement moyen</span>
+                            <span class="text-lg font-bold text-secondary">11.2%</span>
+                        </div>
+                        <div class="w-full bg-neutral-200 rounded-full h-2">
+                            <div class="bg-secondary h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <p class="text-xs text-neutral-500 mt-2">Performance sur 12 mois</p>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-50 p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-blue-500 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-neutral-800 mb-4">Sécurité Maximale</h3>
+                    <p class="text-neutral-600 mb-4">Protocoles de sécurité bancaire et diversification automatique des risques.</p>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-secondary text-sm"></i>
+                            <span class="text-sm text-neutral-600">Chiffrement SSL 256-bit</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-secondary text-sm"></i>
+                            <span class="text-sm text-neutral-600">Conformité PCI DSS</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-secondary text-sm"></i>
+                            <span class="text-sm text-neutral-600">Fonds de garantie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Platform Overview -->
+
+    <!-- @COMPONENT: Borrower Dashboard Demo -->
+    <section id="borrowers" class="py-20 bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-6">
+                        Dashboard Emprunteur
+                    </h2>
+                    <p class="text-xl text-neutral-600 mb-8">
+                        Interface intuitive pour gérer vos demandes de prêt, suivre les offres et planifier vos remboursements.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-file-alt text-primary"></i>
+                            <span class="text-neutral-700">Formulaire de demande intelligent</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-chart-pie text-primary"></i>
+                            <span class="text-neutral-700">Score de crédit en temps réel</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-calendar-alt text-primary"></i>
+                            <span class="text-neutral-700">Planificateur de remboursement</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-xl p-6 border border-neutral-200">
+                    <!-- @COMPONENT: Borrower Dashboard -->
+                    <div class="mb-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-neutral-800">Ma Demande de Prêt</h3>
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm font-medium">En évaluation</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="text-center p-4 bg-neutral-50 rounded-lg">
+                                <div class="text-2xl font-bold text-neutral-800" data-bind="loan.amount">25,000€</div>
+                                <div class="text-sm text-neutral-600">Montant demandé</div>
+                            </div>
+                            <div class="text-center p-4 bg-neutral-50 rounded-lg">
+                                <div class="text-2xl font-bold text-secondary" data-bind="credit.score">742</div>
+                                <div class="text-sm text-neutral-600">Score de crédit</div>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-neutral-600">Taux estimé</span>
+                                <span class="font-semibold text-neutral-800" data-bind="loan.estimatedRate">8.2%</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-neutral-600">Mensualité</span>
+                                <span class="font-semibold text-neutral-800" data-bind="loan.monthlyPayment">447€</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-neutral-600">Durée</span>
+                                <span class="font-semibold text-neutral-800" data-bind="loan.duration">60 mois</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-neutral-200 pt-6">
+                        <h4 class="text-md font-semibold text-neutral-800 mb-4">Offres reçues (3)</h4>
+                        <!-- @MAP: offers.map(offer => ( -->
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-3 bg-neutral-50 rounded-lg border">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-neutral-800" data-bind="investor.name">Investisseur Pro</div>
+                                        <div class="text-sm text-neutral-600" data-bind="offer.amount">15,000€ • 7.8%</div>
+                                    </div>
+                                </div>
+                                <button class="bg-primary text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition-colors" data-event="click:acceptOffer">
+                                    Accepter
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-neutral-50 rounded-lg border">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-building text-white text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-neutral-800" data-bind="investor.name">Fonds Capital+</div>
+                                        <div class="text-sm text-neutral-600" data-bind="offer.amount">25,000€ • 8.5%</div>
+                                    </div>
+                                </div>
+                                <button class="bg-primary text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition-colors" data-event="click:acceptOffer">
+                                    Accepter
+                                </button>
+                            </div>
+                        </div>
+                        <!-- @END_MAP )) -->
+                    </div>
+                    <!-- @END_COMPONENT: Borrower Dashboard -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Borrower Dashboard Demo -->
+
+    <!-- @COMPONENT: Investor Dashboard Demo -->
+    <section id="investors" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-white rounded-xl shadow-xl p-6 border border-neutral-200 order-2 lg:order-1">
+                    <!-- @COMPONENT: Investor Dashboard -->
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-neutral-800 mb-4">Portfolio d'Investissement</h3>
+                        <div class="grid grid-cols-3 gap-4 mb-6">
+                            <div class="text-center p-3 bg-neutral-50 rounded-lg">
+                                <div class="text-xl font-bold text-neutral-800" data-bind="portfolio.totalInvested">127,500€</div>
+                                <div class="text-xs text-neutral-600">Investi</div>
+                            </div>
+                            <div class="text-center p-3 bg-secondary/10 rounded-lg">
+                                <div class="text-xl font-bold text-secondary" data-bind="portfolio.totalReturn">14,325€</div>
+                                <div class="text-xs text-neutral-600">Gains</div>
+                            </div>
+                            <div class="text-center p-3 bg-primary/10 rounded-lg">
+                                <div class="text-xl font-bold text-primary" data-bind="portfolio.roi">11.2%</div>
+                                <div class="text-xs text-neutral-600">ROI</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-600">Répartition par risque</span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-neutral-600">Faible risque (A)</span>
+                                    <span class="text-sm font-medium">45%</span>
+                                </div>
+                                <div class="w-full bg-neutral-200 rounded-full h-2">
+                                    <div class="bg-secondary h-2 rounded-full" style="width: 45%"></div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-neutral-600">Risque modéré (B)</span>
+                                    <span class="text-sm font-medium">35%</span>
+                                </div>
+                                <div class="w-full bg-neutral-200 rounded-full h-2">
+                                    <div class="bg-blue-500 h-2 rounded-full" style="width: 35%"></div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-neutral-600">Risque élevé (C)</span>
+                                    <span class="text-sm font-medium">20%</span>
+                                </div>
+                                <div class="w-full bg-neutral-200 rounded-full h-2">
+                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-neutral-200 pt-6">
+                        <h4 class="text-md font-semibold text-neutral-800 mb-4">Opportunités (12 nouvelles)</h4>
+                        <!-- @MAP: opportunities.map(opportunity => ( -->
+                        <div class="space-y-3">
+                            <div class="p-3 bg-neutral-50 rounded-lg border">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="flex items-center space-x-2">
+                                        <span class="bg-secondary text-white text-xs px-2 py-1 rounded" data-bind="loan.grade">Grade A</span>
+                                        <span class="font-medium text-neutral-800" data-bind="loan.amount">25,000€</span>
+                                    </div>
+                                    <span class="text-sm font-semibold text-secondary" data-bind="loan.rate">7.8%</span>
+                                </div>
+                                <p class="text-sm text-neutral-600 mb-2" data-bind="loan.purpose">Rénovation immobilière • 36 mois</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-neutral-500">Score: <span data-bind="borrower.score">742</span></span>
+                                    <button class="bg-primary text-white px-3 py-1 rounded text-xs hover:bg-blue-700 transition-colors" data-event="click:investInLoan">
+                                        Investir
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-neutral-50 rounded-lg border">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="flex items-center space-x-2">
+                                        <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded" data-bind="loan.grade">Grade B</span>
+                                        <span class="font-medium text-neutral-800" data-bind="loan.amount">18,000€</span>
+                                    </div>
+                                    <span class="text-sm font-semibold text-secondary" data-bind="loan.rate">9.2%</span>
+                                </div>
+                                <p class="text-sm text-neutral-600 mb-2" data-bind="loan.purpose">Consolidation de dettes • 60 mois</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-neutral-500">Score: <span data-bind="borrower.score">658</span></span>
+                                    <button class="bg-primary text-white px-3 py-1 rounded text-xs hover:bg-blue-700 transition-colors" data-event="click:investInLoan">
+                                        Investir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- @END_MAP )) -->
+                    </div>
+                    <!-- @END_COMPONENT: Investor Dashboard -->
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-6">
+                        Dashboard Investisseur
+                    </h2>
+                    <p class="text-xl text-neutral-600 mb-8">
+                        Maximisez vos rendements avec notre marketplace intelligente et notre système de diversification automatique.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-chart-bar text-primary"></i>
+                            <span class="text-neutral-700">Analytics de performance détaillées</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-random text-primary"></i>
+                            <span class="text-neutral-700">Diversification automatique</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-bell text-primary"></i>
+                            <span class="text-neutral-700">Alertes opportunités</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Investor Dashboard Demo -->
+
+    <!-- @COMPONENT: Analytics Section -->
+    <section id="analytics" class="py-20 bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
+                    Analytics & Performance
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Tableau de bord complet avec métriques en temps réel et analyses prédictives.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 text-center">
+                    <div class="text-3xl font-bold text-primary mb-2" data-bind="metrics.totalLoans">2,847</div>
+                    <div class="text-sm text-neutral-600">Prêts financés</div>
+                    <div class="text-xs text-secondary mt-1">
+                        <i class="fas fa-arrow-up"></i> +12% ce mois
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 text-center">
+                    <div class="text-3xl font-bold text-secondary mb-2" data-bind="metrics.totalVolume">€42.8M</div>
+                    <div class="text-sm text-neutral-600">Volume total</div>
+                    <div class="text-xs text-secondary mt-1">
+                        <i class="fas fa-arrow-up"></i> +18% ce mois
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 text-center">
+                    <div class="text-3xl font-bold text-blue-600 mb-2" data-bind="metrics.defaultRate">2.1%</div>
+                    <div class="text-sm text-neutral-600">Taux de défaut</div>
+                    <div class="text-xs text-secondary mt-1">
+                        <i class="fas fa-arrow-down"></i> -0.3% ce mois
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 text-center">
+                    <div class="text-3xl font-bold text-green-600 mb-2" data-bind="metrics.avgReturn">11.2%</div>
+                    <div class="text-sm text-neutral-600">ROI moyen</div>
+                    <div class="text-xs text-secondary mt-1">
+                        <i class="fas fa-arrow-up"></i> +1.1% ce mois
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl border border-neutral-200">
+                    <h3 class="text-lg font-semibold text-neutral-800 mb-4">Évolution du Volume</h3>
+                    <div class="h-64 bg-neutral-50 rounded-lg flex items-center justify-center">
+                        <!-- @FUNCTIONALITY: This chart should implement time-series data visualization using Chart.js or similar -->
+                        <div class="text-center">
+                            <i class="fas fa-chart-line text-4xl text-primary mb-4"></i>
+                            <p class="text-neutral-600">Graphique d'évolution mensuelle</p>
+                            <p class="text-sm text-neutral-500">Implémentation: Chart.js ou D3.js</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-neutral-200">
+                    <h3 class="text-lg font-semibold text-neutral-800 mb-4">Répartition par Grade</h3>
+                    <div class="h-64 bg-neutral-50 rounded-lg flex items-center justify-center">
+                        <!-- @FUNCTIONALITY: This pie chart should show loan distribution by credit grade -->
+                        <div class="text-center">
+                            <i class="fas fa-chart-pie text-4xl text-secondary mb-4"></i>
+                            <p class="text-neutral-600">Graphique en secteurs</p>
+                            <p class="text-sm text-neutral-500">Grade A: 45% | Grade B: 35% | Grade C: 20%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Analytics Section -->
+
+    <!-- @COMPONENT: Technology Stack -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-neutral-800 mb-4">
+                    Architecture Technique
+                </h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Stack technologique moderne et scalable pour une performance optimale.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div class="text-center">
+                    <div class="bg-neutral-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3 border border-neutral-200">
+                        <i class="fab fa-react text-2xl text-blue-500"></i>
+                    </div>
+                    <p class="text-sm font-medium text-neutral-800">React</p>
+                    <p class="text-xs text-neutral-600">Frontend</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-neutral-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3 border border-neutral-200">
+                        <i class="fab fa-node-js text-2xl text-green-600"></i>
+                    </div>
+                    <p class="text-sm font-medium text-neutral-800">Node.js</p>
+                    <p class="text-xs text-neutral-600">Backend</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-neutral-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3 border border-neutral-200">
+                        <i class="fas fa-database text-2xl text-blue-600"></i>
+                    </div>
+                    <p class="text-sm font-medium text-neutral-800">PostgreSQL</p>
+                    <p class="text-xs text-neutral-600">Database</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-neutral-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3 border border-neutral-200">
+                        <i class="fab fa-python text-2xl text-yellow-600"></i>
+                    </div>
+                    <p class="text-sm font-medium text-neutral-800">Python</p>
+                    <p class="text-xs text-neutral-600">ML/Scoring</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-neutral-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3 border border-neutral-200">
+                        <i class="fab fa-aws text-2xl text-orange-500"></i>
+                    </div>
+                    <p class="text-sm font-medium text-neutral-800">AWS</p>
+                    <p class="text-xs text-neutral-600">Cloud</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-neutral-50 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-3 border border-neutral-200">
+                        <i class="fas fa-chart-line text-2xl text-purple-600"></i>
+                    </div>
+                    <p class="text-sm font-medium text-neutral-800">Analytics</p>
+                    <p class="text-xs text-neutral-600">BI Tools</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Technology Stack -->
+
+    <!-- @COMPONENT: CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-blue-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                Prêt à Révolutionner vos Finances ?
+            </h2>
+            <p class="text-xl mb-8 text-blue-100">
+                Rejoignez des milliers d'utilisateurs qui ont déjà optimisé leurs investissements et emprunts.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors duration-200">
+                    <!-- TODO: Implement demo registration -->
+                    Démarrer Maintenant
+                </button>
+                <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors duration-200">
+                    <!-- TODO: Implement documentation access -->
+                    Documentation Technique
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: CTA Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-neutral-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-coins text-primary text-xl"></i>
+                        <span class="text-lg font-bold">LendTech Pro</span>
+                    </div>
+                    <p class="text-neutral-400 text-sm">
+                        Plateforme de prêt peer-to-peer innovante avec scoring algorithmique et marketplace intelligente.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Produit</h4>
+                    <ul class="space-y-2 text-sm text-neutral-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Emprunts</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Investissements</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Analytics</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Ressources</h4>
+                    <ul class="space-y-2 text-sm text-neutral-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Guide Développeurs</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Support</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Légal</h4>
+                    <ul class="space-y-2 text-sm text-neutral-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Conditions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Confidentialité</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Conformité</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-neutral-800 mt-8 pt-8 text-center text-sm text-neutral-400">
+                © 2024 LendTech Pro. Projet portfolio développé avec passion pour démontrer l'expertise fintech.
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // TODO: Implement smooth scrolling for navigation
+            // TODO: Implement interactive dashboard updates
+            // TODO: Implement form validation logic
+            // TODO: Implement credit scoring calculations
+            // TODO: Implement investment matching algorithms
+            // TODO: Implement real-time analytics updates
+            
+            // Simple smooth scrolling implementation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Placeholder for interactive elements
+            console.log('LendTech Pro - Platform initialized');
+            console.log('TODO: Implement comprehensive fintech functionality');
+        })();
+    </script>
+</body>
+</html>

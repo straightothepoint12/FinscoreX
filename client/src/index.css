@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(0 0% 93%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 96%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(222.2 84% 4.9%);
+  --primary-foreground: hsl(210 40% 98%);
+  --secondary: hsl(210 40% 96%);
+  --secondary-foreground: hsl(222.2 84% 4.9%);
+  --muted: hsl(210 40% 90%);
+  --muted-foreground: hsl(215.4 16.3% 46.9%);
+  --accent: hsl(210 40% 88%);
+  --accent-foreground: hsl(222.2 84% 4.9%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(214.3 31.8% 85%);
+  --input: hsl(214.3 31.8% 91.4%);
+  --ring: hsl(222.2 84% 4.9%);
+  --chart-1: hsl(12 76% 61%);
+  --chart-2: hsl(173 58% 39%);
+  --chart-3: hsl(197 37% 24%);
+  --chart-4: hsl(43 74% 66%);
+  --chart-5: hsl(27 87% 67%);
+  --radius: 0.5rem;
+
+  /* FinScoreX Custom Colors */
+  --finscorex-primary: hsl(222 84% 35%);
+  --finscorex-secondary: hsl(158 64% 40%);
+  --finscorex-danger: hsl(0 74% 42%);
+  --finscorex-neutral-50: hsl(216 100% 98%);
+  --finscorex-neutral-100: hsl(218 27% 94%);
+  --finscorex-neutral-800: hsl(219 39% 11%);
+  --finscorex-neutral-900: hsl(224 71% 4%);
+  --font-inter: 'Inter', sans-serif;
+}
+
+.dark {
+  --background: hsl(222.2 84% 4.9%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222.2 84% 4.9%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(217.2 32.6% 15%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(210 40% 98%);
+  --primary-foreground: hsl(222.2 84% 4.9%);
+  --secondary: hsl(217.2 32.6% 17.5%);
+  --secondary-foreground: hsl(210 40% 98%);
+  --muted: hsl(217.2 32.6% 17.5%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+  --accent: hsl(217.2 32.6% 17.5%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(217.2 32.6% 17.5%);
+  --input: hsl(217.2 32.6% 17.5%);
+  --ring: hsl(212.7 26.8% 83.9%);
+  --chart-1: hsl(220 70% 50%);
+  --chart-2: hsl(160 60% 45%);
+  --chart-3: hsl(30 80% 55%);
+  --chart-4: hsl(280 65% 60%);
+  --chart-5: hsl(340 75% 55%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+/* Custom FinScoreX Utilities */
+.bg-finscorex-primary {
+  background-color: var(--finscorex-primary);
+}
+
+/* Force dropdown/popover backgrounds to be visible */
+[data-radix-popper-content-wrapper] {
+  background-color: hsl(0 0% 96%) !important;
+}
+
+.dropdown-menu-content,
+.popover-content,
+[role="menu"],
+[data-radix-collection-item],
+[data-radix-select-content],
+[data-radix-dropdown-menu-content] {
+  background-color: hsl(0 0% 96%) !important;
+  border: 1px solid hsl(0 0% 80%) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* All select and dropdown items */
+[data-radix-select-item],
+[data-radix-dropdown-menu-item],
+.dropdown-menu-item,
+[role="menuitem"],
+[role="option"] {
+  background-color: transparent !important;
+  color: hsl(210 25% 7.8431%) !important;
+}
+
+[data-radix-select-item]:hover,
+[data-radix-dropdown-menu-item]:hover,
+.dropdown-menu-item:hover,
+[role="menuitem"]:hover,
+[role="option"]:hover {
+  background-color: hsl(0 0% 90%) !important;
+}
+
+/* Radix Select components */
+.select-content {
+  background-color: hsl(0 0% 96%) !important;
+  border: 1px solid hsl(0 0% 80%) !important;
+}
+
+.select-item {
+  background-color: transparent !important;
+  color: hsl(210 25% 7.8431%) !important;
+}
+
+.select-item:hover {
+  background-color: hsl(0 0% 90%) !important;
+}
+
+.bg-finscorex-secondary {
+  background-color: var(--finscorex-secondary);
+}
+
+.text-finscorex-primary {
+  color: var(--finscorex-primary);
+}
+
+.text-finscorex-secondary {
+  color: var(--finscorex-secondary);
+}
+
+.border-finscorex-primary {
+  border-color: var(--finscorex-primary);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+/* Smooth transitions for fintech feel */
+.transition-finscorex {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--finscorex-primary));
+}
